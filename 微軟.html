@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft – 雲端、電腦、應用程式和遊戲</title>
+    <link rel="shortcut icon" href="./img/LOGO/favicon.ico" type="image/x-icon">
+    <!-- font-awesome CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', SegoeUI, 'Microsoft JhengHei', 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: calc(1600px + 10%);
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        header .container {
+            height: 54px;
+        }
+
+        .logo img {
+            width: 108px;
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+
+        .menu-left {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            height: 54px;
+            padding: 0;
+            list-style-type: none;
+            margin-top: 7px;
+            margin-bottom: 0;
+            position: absolute;
+            top: 10px;
+            left: 230px;
+        }
+
+        .menu-right {
+            display: flex;
+            position: absolute;
+            top: 17px;
+            right: 140px;
+            font-size: 13px;
+            gap: 35px;
+        }
+
+        .member {
+            display: flex;
+            gap: 35px;
+        }
+
+        .sign-btn {
+            position: relative;
+        }
+
+        .sign-btn img {
+            position: absolute;
+            top: -7px;
+            right: -45px;
+            width: 32px;
+        }
+
+        .carousel-container,
+        .carousel4-container {
+            position: relative;
+            width: 100%;
+            /*
+	        1920px = 100vw 
+	        600 / 1920 = 0.3125
+	        0.3125 * 100 = 31.25
+	        */
+            height: 31.25vw;
+            /* background-color: aquamarine; */
+        }
+
+        .carousel-pictrue {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(./img/carousel/1600x600.jpg);
+            background-size: 100%;
+        }
+        @media screen and (max-width: 1260px) {
+            
+        }
+
+        .carousel-text {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 0 95px;
+        }
+
+        .carousel-text>h2 {
+            margin: 0 0 20px 0;
+            font-size: 36px;
+        }
+
+        .carousel-text>p {
+            width: 510px;
+            margin: 0 0 25px 0;
+        }
+
+        .buy-now-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 124px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .buy-now-btn * {
+            transition-duration: 0.5s;
+        }
+
+        .buy-now-btn:hover>span {
+            text-decoration: underline;
+        }
+
+        .buy-now-btn>i {
+            margin-left: 5px;
+        }
+
+        .buy-now-btn:hover>i {
+            margin-left: 15px;
+        }
+
+        .link-servicebox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 60px;
+            padding-bottom: 25px;
+        }
+
+        .servicebox1:hover,
+        .servicebox2:hover,
+        .servicebox3:hover {
+            text-decoration: underline;
+        }
+
+        .servicebox1,
+        .servicebox2,
+        .servicebox3 {
+            display: block;
+            padding: 20px 6px;
+            width: 184px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .row {
+            display: flex;
+            margin: 0 -12px;
+            margin-top: 20px;
+        }
+
+        .social-service {
+            width: 25%;
+            padding: 0 12px;
+        }
+
+        .service-picture img {
+            width: 100%;
+        }
+
+        .lazyloaded h1 {
+            font-size: larger;
+            font-weight: 600;
+        }
+
+        .lazyloaded p {
+            font-size: 15px;
+        }
+
+        .service-btn,
+        .business-btn {
+            font-size: 15px;
+            font-weight: bold;
+            color: #0767B6;
+        }
+
+        .service-btn span:hover {
+            text-decoration: underline;
+        }
+        .service-btn span {
+            /* background-color: slategray; */
+            height: 80px;
+            width: 150px;
+        }
+
+        .service-btn:hover>span {
+            margin-left: 10px;
+            transition-duration: 0.4s;
+        }
+
+        .carousel4-container {
+            padding-top: 48px;
+        }
+
+        .carousel4-pictrue {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(./img/carousel4/big.webp);
+            background-size: 100%;
+        }
+
+        .carousel4-text {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding: 0 95px;
+        }
+
+        .carousel4-text>h3 {
+            margin: 0 0 20px 0;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .carousel4-text>p {
+            width: 510px;
+            margin: 0 0 25px 0;
+        }
+
+        #carousel5 {
+            width: 100%;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 40px;
+            padding-bottom: 51px;
+        }
+
+        .link img {
+            width: 28px;
+        }
+
+        .link>span {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .link>a {
+            font-size: 0px;
+        }
+
+        #business>.container {
+            padding-top: 48px;
+        }
+
+        .row {
+            display: flex;
+            margin: 0 -12px;
+        }
+
+        .col {
+            width: 25%;
+            padding: 0 12px;
+        }
+
+        .business-picture img {
+            width: 100%;
+        }
+
+        #business>.container h5 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .business-card h4 {
+            font-size: larger;
+            font-weight: 600;
+        }
+
+        .business-card p {
+            font-size: 15px
+        }
+
+        .business-btn:hover {
+            text-decoration: underline;
+        }
+        
+        .business-btn span {
+            /* background-color: slategray; */
+            height: 80px;
+            width: 150px;
+        }
+
+        .business-btn:hover>span {
+            margin-left: 10px;
+            transition-duration: 0.4s;
+        }
+
+        .col-6 {
+            width: 16.66%;
+            padding: 0 12px;
+        }
+
+        footer {
+            padding: 35px 0 17px 0;
+            background-color: #F2F2F2;
+            color: #616161;
+        }
+
+        .footer-title {
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .footer-lists {
+            padding: 0;
+            margin: 0 0 50px 0;
+            list-style-type: none;
+        }
+        .footer-lists li {
+            padding-bottom: 8px;
+        }
+
+        .footer-items {
+            font-size: 12px;
+            color: #616161;          
+        }
+        .footer-items:hover, .footer-sub-items:hover, .footer-language:hover {
+            text-decoration: underline;
+            color: rgb(43, 42, 42);
+        }
+
+        .footer-items:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+
+        .footer-sub-lists {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .footer-sub-items, .footer-language>a {
+            color: #616161;
+        }
+
+        .footer-language i {
+            width: 20px;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="">
+                    <img src="./img/LOGO/logo.png" alt="">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu-left">
+                    <li class="menu-item"><a href="">Microsoft 365</a></li>
+                    <li class="menu-item"><a href="">Office</a></li>
+                    <li class="menu-item"><a href="">Windows</a></li>
+                    <li class="menu-item"><a href="">Surface</a></li>
+                    <li class="menu-item"><a href="">Xbox</a></li>
+                    <li class="menu-item"><a href="">支援</a></li>
+                </ul>
+            </nav>
+            <div class="menu-right">
+                <div class="sitemap-all-btn"><span><a href=""><span>所有 Microsoft</span></a> <i class="fas fa-angle-down"></i></div>
+                <div class="search-btn"><a href=""><span>搜尋</span></a>  <i class="fas fa-search"></i></div>
+                <div class="member">
+                    <div class="cart-btn"><a href=""><span>購物車</span> <i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                    <div class="sign-btn"><a href=""><span>登入</span><img src="./img/header/sign-in.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="carousel">
+            <div class="container">
+                <div class="carousel-container">
+                    <div class="carousel-pictrue"></div>
+                    <div class="carousel-text">
+                        <h2>隨身型動力</h2>
+                        <p>Surface Go 2 結合了平板電腦的多功能性與筆記型電腦的可攜性，非常適合用來處理日常工作、家庭作業和玩樂</p>
+                        <a href="" class="buy-now-btn">
+                            <span>立刻選購</span>
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carousel2">
+            <div class="container">
+                <div class="link-servicebox">
+                    <a href="" class="servicebox1">
+                        <img src="./img/carousel2/1.png" alt="">
+                        <p>選擇您的<br class="br">Microsoft 365</p>
+                    </a>
+                    <a href="" class="servicebox2">
+                        <img src="./img/carousel2/2.webp" alt="">
+                        <p>選購 Surface 裝置</p>
+                    </a>
+                    <a href="" class="servicebox3">
+                        <img src="./img/carousel2/3.webp" alt="">
+                        <p>取得 Windows 10</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="carousel3">
+            <div class="container">
+                <div class="row">
+                    <div class="social-service">
+                        <div class="lazyloaded">
+                            <div class="service-picture">
+                                <img src="./img/carousel3/1.jpg" alt="">
+                            </div>
+                            <h1>Surface Pro 7</h1>
+                            <p>更多 Pro 中您熟知的功能。 比以往更加強大，Surface Pro 7 配備筆記型電腦等級的 Intel® Core™ 處理器。</p>
+                            <a href=""class="service-btn">
+                                <span>立即選購</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-service">
+                        <div class="lazyloaded">
+                            <div class="service-picture">
+                                <img src="./img/carousel3/2.jpg" alt="">
+                            </div>
+                            <h1>Microsoft 365</h1>
+                            <p>進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</p>
+                            <a href="" class="service-btn">
+                                <span>最多可供6人使用</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>&emsp;&emsp;&emsp;&emsp;
+                            <a href=""class="service-btn">
+                                <span>適合1人使用</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-service">
+                        <div class="lazyloaded">
+                            <div class="service-picture">
+                                <img src="./img/carousel3/3.jpg" alt="">
+                            </div>
+                            <h1>Xbox Game Pass Ultimate</h1>
+                            <p>Xbox Live Gold 和超過 100 款高品質的主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</p>
+                            <a href=""class="service-btn">
+                                <span>立即加入</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-service">
+                        <div class="lazyloaded">
+                            <div class="service-picture">
+                                <img src="./img/carousel3/4.jpg" alt="">
+                            </div>
+                            <h1>Microsoft Edge</h1>
+                            <p>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</p>
+                            <a href=""class="service-btn">
+                                <span>立即下載</span>
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carousel4">
+            <div class="container">
+                <div class="carousel4-container">
+                    <div class="carousel4-pictrue"></div>
+                    <div class="carousel4-text">
+                        <h3>Microsoft OneDrive</h3>
+                        <p>將檔案和相片儲存到OneDrive，即可隨時隨地從任何裝置存取</p>
+                        <a href="" class="buy-now-btn">
+                            <span>深入了解</span>
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="business">
+            <div class="container">
+                <h5>適用於商務</h5>
+                <div class="row">
+                    <div class="col">
+                        <div class="business-card">
+                            <div class="business-picture">
+                                <img src="./img/business/1.jpg" alt="">
+                            </div>
+                            <h4>適用於商務的 Surface</h4>
+                            <p>無論從事哪種工作，都有一款有助於成功的 Surface。</p>
+                            <a href="" class="business-btn">
+                                <span>立即選購</span> 
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="business-card">
+                            <div class="business-picture">
+                                <img src="./img/business/2.jpg" alt="">
+                            </div>
+                            <h4>Microsoft Teams</h4>
+                            <p>聊天、開會、通話和共同作業。</p>
+                            <a href="" class="business-btn">
+                                <span>深入了解</span> 
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="business-card">
+                            <div class="business-picture">
+                                <img src="./img/business/3.jpg" alt="">
+                            </div>
+                            <h4>Microsoft 365 商務版</h4>
+                            <p>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</p>
+                            <a href="" class="business-btn">
+                                <span>立即選購</span> 
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="business-card">
+                            <div class="business-picture">
+                                <img src="./img/business/4.jpg" alt="">
+                            </div>
+                            <h4>混合辦公解決方案</h4>
+                            <p>了解我們的方法、Microsoft 這一路以來所得到的教訓，以及如何增強員工能力並滿足新客戶需求。</p>
+                            <a href="" class="business-btn">
+                                <span>深入了解</span> 
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section id="carousel5">
+            <div class="container">
+                <div class="link">
+                    <span>關注 Microsoft</span>
+                    <a href="https://zh-tw.facebook.com/MicrosoftTaiwan/"><img src="./img/carousel5/FB.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/user/microsofttaiwan"><img src="./img/carousel5/YT.jpg" alt=""></a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="footer-title">最新動向</div>
+                    <ul class="footer-lists">
+                        <li> <a href="" class="footer-items">Microsoft 365</a></li>
+                        <li> <a href="" class="footer-items">Surface Go</a></li>
+                        <li> <a href="" class="footer-items">Surface Book 2</a></li>
+                        <li> <a href="" class="footer-items">Surface Pro</a></li>
+                        <li> <a href="" class="footer-items">Windows 10 應用程式</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="footer-title">Microsoft Store</div>
+                    <ul class="footer-lists">
+                        <li> <a href="" class="footer-items">帳戶設定檔</a></li>
+                        <li> <a href="" class="footer-items">下載中心</a></li>
+                        <li> <a href="" class="footer-items">Microsoft Store 支援</a></li>
+                        <li> <a href="" class="footer-items">退貨/退款</a></li>
+                        <li> <a href="" class="footer-items">訂單追蹤</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="footer-title">教育</div>
+                    <ul class="footer-lists">
+                        <li> <a href="" class="footer-items">Microsoft 在教育領域的應用</a></li>
+                        <li> <a href="" class="footer-items">學生適用的 Office</a></li>
+                        <li> <a href="" class="footer-items">學校適用的 Office 365</a></li>
+                        <li> <a href="" class="footer-items">Microsoft Azure 在教育領域的應用</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="footer-title">企業</div>
+                    <ul class="footer-lists">
+                        <li> <a href="" class="footer-items">Azure</a></li>
+                        <li> <a href="" class="footer-items">AppSource</a></li>
+                        <li> <a href="" class="footer-items">汽車</a></li>
+                        <li> <a href="" class="footer-items">政府機構</a></li>
+                        <li> <a href="" class="footer-items">醫療保健</a></li>
+                        <li> <a href="" class="footer-items">製造</a></li>
+                        <li> <a href="" class="footer-items">金融服務</a></li>
+                        <li> <a href="" class="footer-items">零售</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="footer-title">開發人員</div>
+                    <ul class="footer-lists">
+                        <li> <a href="" class="footer-items">Microsoft Visual Studio</a></li>
+                        <li> <a href="" class="footer-items">Windows 開發人員中心</a></li>
+                        <li> <a href="" class="footer-items">開發人員中心</a></li>
+                        <li> <a href="" class="footer-items">Microsoft 開發人員計畫</a></li>
+                        <li> <a href="" class="footer-items">Channel 9</a></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="footer-title">公司</div>
+                    <ul class="footer-lists">
+                        <li><a href="" class="footer-items">人才招募</a></li>
+                        <li><a href="" class="footer-items">公司新聞</a></li>
+                        <li><a href="" class="footer-items">Microsoft 隱私權</a></li>
+                        <li><a href="" class="footer-items">投資者</a></li>
+                        <li><a href="" class="footer-items">安全性</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-language"><a href=""><i class="fas fa-globe-europe"></i> 中文(台灣)</a></div>
+                <ul class="footer-sub-lists">
+                    <li><a href="" class="footer-sub-items">連絡 Microsoft</a></li>
+                    <li><a href="" class="footer-sub-items">隱私權</a></li>
+                    <li><a href="" class="footer-sub-items">使用規定</a></li>
+                    <li><a href="" class="footer-sub-items">商標</a></li>
+                    <li><a href="" class="footer-sub-items">有關我們的廣告訊息</a></li>
+                    <li>© Microsoft 2021</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
